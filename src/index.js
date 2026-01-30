@@ -2,8 +2,11 @@ import "/src/styles/index.scss";
 
 async function loadHTML(id, path) {
   const container = document.getElementById(id);
-  //   if (!container) return;
-  //   container.innerHTML = "";
+  if (!container) return;
+  container.innerHTML = "";
+
+  console.log(id, container);
+
   const res = await fetch(path);
   const html = await res.text();
   container.innerHTML = html;
@@ -22,7 +25,7 @@ async function loadHTML(id, path) {
 //   }
 // }
 loadHTML("header", "/src/partials/header.html");
-loadHTML("hero", "/src/partials/hero.html");
+loadHTML("hero", "/src/partials/main-page/hero.html");
 loadHTML("footer", "/src/partials/footer.html");
 
 // if (import.meta.hot) {

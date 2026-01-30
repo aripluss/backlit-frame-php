@@ -1,14 +1,112 @@
-.hero-animate {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
+@use "../utils" as *;
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+// .hero-animate {
+//   animation: fadeInUp 0.8s ease-out forwards;
+// }
+
+// @keyframes fadeInUp {
+//   from {
+//     opacity: 0;
+//     transform: translateY(20px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+.hero {
+  overflow: hidden;
+  padding-block-start: 144px;
+  padding-block-end: 80px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    @include respond(lg) {
+      flex-direction: row;
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @include respond(lg) {
+      align-items: start;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    padding-inline: 16px;
+    padding-block: 6px;
+    font-size: $font-xs;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    // text-transform: uppercase;
+    border-radius: 50px;
+
+    &.badge--origin {
+      color: var(--accent-text-color);
+      background-color: var(--bgr-badge);
+    }
+  }
+
+  &__title,
+  &__description {
+    text-align: center;
+
+    @include respond(lg) {
+      text-align: start;
+    }
+
+    span {
+      color: var(--accent-color);
+    }
+  }
+
+  &__description {
+    color: var(--secondary-text-color);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond(md) {
+      // inline-size: 500px;
+      flex-direction: row;
+    }
+
+    & .btn {
+      inline-size: 242px;
+
+      @include respond(lg) {
+        inline-size: auto;
+      }
+    }
+  }
+
+  &-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+
+    &--glow {
+      box-shadow: 0 0 40px rgba(255, 200, 100, 0.6);
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
   }
 }
