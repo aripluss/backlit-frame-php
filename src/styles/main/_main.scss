@@ -1,15 +1,118 @@
+@use "../utils" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 100%;
   padding-inline: 16px;
 
   @include respond(md) {
-    max-width: 720px;
+    max-width: 1200px;
+    // max-width: 720px;
     margin-inline: auto;
     padding-inline: 24px;
   }
 
   @include respond(lg) {
-    max-width: 1200px;
+    // max-width: 1200px;
     padding-inline: 120px;
   }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 16px;
+  padding-inline: 32px;
+  border-radius: $radius-md;
+  font-family: var(--font-main);
+  font-size: $font-md;
+  font-weight: $fw-bold;
+
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn--primary {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: $shadow-default var(--shadow-color);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--accent-text-color);
+    // box-shadow: $shadow-default var(--shadow-color);
+  }
+
+  &:active {
+    // transform: scale(0.95);
+  }
+}
+
+.btn--secondary {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--bgr-color);
+  }
+
+  &:active {
+    // transform: scale(0.95);
+  }
+}
+
+.btn--tertiary {
+  background-color: var(--primary-text-color);
+  color: white;
+  box-shadow: var(--shadow-default);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--bgr-dark-color);
+  }
+
+  &:active {
+    // transform: scale(0.95);
+  }
+}
+
+// Glassmorphism utility for buttons
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-text-color);
 }

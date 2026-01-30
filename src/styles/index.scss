@@ -1,6 +1,20 @@
-@import "./utils/vars";
-@import "./main/main";
-@import "./components/header";
-@import "./components/footer";
-@import "./utils/breakpoints";
-@import "./utils/mixins";
+// @import "./utils/vars";
+// @import "./utils/breakpoints";
+// @import "./utils/mixins";
+
+// @import "./main/main";
+// @import "./components/header";
+// @import "./components/footer";
+
+// @use "./utils/vars" as *;
+// @use "./utils/breakpoints" as *;
+// @use "./utils/mixins" as *;
+
+// @use "./components/header";
+// @use "./main/main";
+// @use "./components/footer";
+
+@use "./utils" as *;
+@use "./components/header";
+@use "./main/main";
+@use "./components/footer";

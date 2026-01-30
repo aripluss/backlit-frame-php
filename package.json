@@ -1,0 +1,26 @@
+{
+  "name": "backlit-frame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Iryna Klosheva",
+  "license": "ISC",
+  "description": "Site for LED backlit frame night light",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aripluss/backlit-frame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aripluss/backlit-frame/issues"
+  },
+  "homepage": "https://github.com/aripluss/backlit-frame#readme",
+  "devDependencies": {
+    "sass": "^1.97.3",
+    "vite": "^7.3.1"
+  }
+}
