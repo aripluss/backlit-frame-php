@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Iryna Klosheva",
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/aripluss/backlit-frame#readme",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.97.3",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vite-plugin-static-copy": "^3.2.0"
   }
 }

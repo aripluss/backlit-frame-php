@@ -1,22 +1,26 @@
-import "./src/styles/index.scss";
+// import "./src/styles/index.scss";
+
+const isProd = import.meta.env.PROD;
+function getPath(file) {
+  return isProd ? ` ./partials/${file}` : `./src/partials/${file}`;
+}
 
 async function loadHTML(id, path) {
   const container = document.getElementById(id);
+
   if (!container) return;
   container.innerHTML = "";
-
-  console.log(id, container);
 
   const res = await fetch(path);
   const html = await res.text();
   container.innerHTML = html;
 }
 
-loadHTML("header", "./src/partials/header.html");
-loadHTML("hero", "./src/partials/main-page/hero.html");
-loadHTML("popular-designs", "./src/partials/main-page/popular-designs.html");
-loadHTML("how-it-works", "./src/partials/main-page/how-it-works.html");
-loadHTML("why-we", "./src/partials/main-page/why-we.html");
-loadHTML("steps-to-order", "./src/partials/main-page/steps-to-order.html");
-loadHTML("feedback", "./src/partials/main-page/feedback.html");
-loadHTML("footer", "./src/partials/footer.html");
+loadHTML("header", getPath("header.html"));
+loadHTML("hero", getPath("main-page/hero.html"));
+loadHTML("popular-designs", getPath("main-page/popular-designs.html"));
+loadHTML("how-it-works", getPath("main-page/how-it-works.html"));
+loadHTML("why-we", getPath("main-page/why-we.html"));
+loadHTML("steps-to-order", getPath("main-page/steps-to-order.html"));
+loadHTML("feedback", getPath("main-page/feedback.html"));
+loadHTML("footer", getPath("footer.html"));
