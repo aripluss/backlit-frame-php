@@ -20,18 +20,20 @@
       </div>
     </div>
 
-    <div class="hero__image">
-      <div class="hero__image-frame js-frame">
-        <img
-          src="hero_image.png"
-          alt="LED backlit frame hero"
-          class="hero__image"
-        />
+    <div class="hero__image-frame js-frame">
+      <img
+        class="hero__image"
+        src="/src/images/hero-image-glow.png"
+        srcset="
+          /src/images/hero-image-glow.png    1x,
+          /src/images/hero-image-glow@2x.png 2x
+        "
+        alt="Світлова картина з підсвіткою"
+      />
 
-        <button class="hero__toggle js-light-toggle">
-          <span class="hero__toggle-text">💡 Увімкнути</span>
-        </button>
-      </div>
+      <button class="btn btn--glass hero__toggle js-light-toggle">
+        <span class="hero__toggle-text">💡 Вимкнути</span>
+      </button>
     </div>
   </div>
 </section>

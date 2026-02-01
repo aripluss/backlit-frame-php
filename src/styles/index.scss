@@ -1,21 +1,11 @@
-// @import "./utils/vars";
-// @import "./utils/breakpoints";
-// @import "./utils/mixins";
-
-// @import "./main/main";
-// @import "./components/header";
-// @import "./components/footer";
-
-// @use "./utils/vars" as *;
-// @use "./utils/breakpoints" as *;
-// @use "./utils/mixins" as *;
-
-// @use "./components/header";
-// @use "./main/main";
-// @use "./components/footer";
-
 @use "./utils" as *;
+@use "./main/main";
 @use "./components/header";
 @use "./components/hero";
-@use "./main/main";
+@use "./components/popular-designs";
+@use "./components/how-it-works";
+@use "./components/why-we";
+@use "./components/steps-to-order";
+@use "./components/feedback";
+
 @use "./components/footer";

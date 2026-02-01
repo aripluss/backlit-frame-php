@@ -12,9 +12,6 @@
     gap: 24px;
     // gap: auto;
   }
-  @include respond(lg) {
-    // gap: auto;
-  }
 
   &__container {
     height: 64px;
@@ -73,7 +70,7 @@
     }
 
     &__link {
-      font-size: $font-sm;
+      font-size: $font-xs;
       font-weight: $fw-medium;
       color: var(--secondary-text-color);
       text-decoration: none;

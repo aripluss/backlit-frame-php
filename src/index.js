@@ -12,25 +12,11 @@ async function loadHTML(id, path) {
   container.innerHTML = html;
 }
 
-// async function loadHTML(id, path) {
-//   const container = document.getElementById(id);
-//   if (!container) return;
-//   try {
-//     const res = await fetch(path);
-//     if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-//     const html = await res.text();
-//     container.innerHTML = html;
-//   } catch (e) {
-//     console.error(e);
-//   }
-// }
 loadHTML("header", "/src/partials/header.html");
 loadHTML("hero", "/src/partials/main-page/hero.html");
+loadHTML("popular-designs", "/src/partials/main-page/popular-designs.html");
+loadHTML("how-it-works", "/src/partials/main-page/how-it-works.html");
+loadHTML("why-we", "/src/partials/main-page/why-we.html");
+loadHTML("steps-to-order", "/src/partials/main-page/steps-to-order.html");
+loadHTML("feedback", "/src/partials/main-page/feedback.html");
 loadHTML("footer", "/src/partials/footer.html");
-
-// if (import.meta.hot) {
-//   import.meta.hot.accept(() => {
-//     loadHTML("header", "/src/partials/header.html");
-//     loadHTML("footer", "/src/partials/footer.html");
-//   });
-// }
