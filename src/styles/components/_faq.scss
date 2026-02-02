@@ -1,0 +1,54 @@
+@use "../utils" as *;
+
+.faq {
+  background-color: white;
+
+  &__container {
+    max-inline-size: 832px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__item {
+    border: 1px solid var(--border-color);
+    border-radius: $radius-lg;
+    margin-bottom: $radius-md;
+    overflow: hidden;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    padding-inline: 24px;
+    font-weight: $fw-bold;
+    background: var(--bgr-color);
+    cursor: pointer;
+
+    &::after {
+      content: "+";
+      font-size: 24px;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  & details[open] .faq__summary::after {
+    content: "−";
+  }
+
+  &__content {
+    padding-block: 16px;
+    padding-inline: 24px;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text-color);
+  }
+}

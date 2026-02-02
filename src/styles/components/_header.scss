@@ -10,7 +10,6 @@
   box-shadow: $shadow-default var(--shadow-color);
   @include respond(md) {
     gap: 24px;
-    // gap: auto;
   }
 
   &__container {
