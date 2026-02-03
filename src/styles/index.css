@@ -638,6 +638,14 @@ section {
 .custom__step {
   position: relative;
 }
+@media (min-width: 1440px) {
+  .custom__step:nth-child(2) {
+    margin-top: 48px;
+  }
+  .custom__step:nth-child(3) {
+    margin-top: 96px;
+  }
+}
 .custom__step-image {
   width: 100%;
   aspect-ratio: 1/1;

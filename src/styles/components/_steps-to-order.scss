@@ -30,6 +30,16 @@
 
   &__step {
     position: relative;
+
+    @include respond(lg) {
+      &:nth-child(2) {
+        margin-top: 48px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 96px;
+      }
+    }
   }
 
   &__step-image {
