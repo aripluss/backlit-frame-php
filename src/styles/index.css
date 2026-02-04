@@ -294,6 +294,10 @@ section {
   transition: transform 0.25s ease;
 }
 
+body.page-catalog .header__navigation {
+  display: none;
+}
+
 .hero {
   overflow: hidden;
   padding-block-start: 104px;

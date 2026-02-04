@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backlit frame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body class="page-catalog">
+    <div id="header"></div>
+
+    <!-- <main> -->
+    <!-- <div id="hero"></div>
+      <div id="popular-designs"></div>
+      <div id="how-it-works"></div>
+      <div id="why-we"></div>
+      <div id="steps-to-order"></div>
+      <div id="feedback"></div>
+      <div id="faq"></div>
+      <div id="contact_form"></div> -->
+    <!-- </main> -->
+
+    <main>
+      <section class="catalog">
+        <div class="catalog__header container">
+          <div class="catalog__titles">
+            <h1 class="catalog__title">Каталог дизайнів</h1>
+            <p class="catalog__subtitle">Наші роботи наживо</p>
+          </div>
+
+          <!-- search bar -->
+          <div class="catalog__search">
+            <input
+              type="text"
+              class="catalog__search-input"
+              placeholder="Пошук"
+            />
+            <button class="btn btn--secondary catalog__search-btn">🔍</button>
+          </div>
+        </div>
+      </section>
+      <!-- filters -->
+      <section>
+        <div class="catalog__filters container">
+          <button class="catalog__filter-btn">Стилі</button>
+          <button class="catalog__filter-btn">Романтика</button>
+          <button class="catalog__filter-btn">Серіали</button>
+          <button class="catalog__filter-btn">Аніме</button>
+          <button class="catalog__filter-btn">Абстракція</button>
+          <button class="catalog__filter-btn">Природа</button>
+          <button class="catalog__filter-btn">Космос</button>
+          <button class="catalog__filter-btn">Автомобілі</button>
+          <button class="catalog__filter-btn">Тварини</button>
+        </div>
+      </section>
+      <!-- catalog grid -->
+      <section>
+        <div class="catalog__grid container">
+          <div class="catalog__item">Товар 1</div>
+          <div class="catalog__item">Товар 2</div>
+          <div class="catalog__item">Товар 3</div>
+          <div class="catalog__item">Товар 4</div>
+          <div class="catalog__item">Товар 5</div>
+          <div class="catalog__item">Товар 6</div>
+          <div class="catalog__item">Товар 7</div>
+          <div class="catalog__item">Товар 8</div>
+        </div>
+      </section>
+      <!-- pagination -->
+      <section>
+        <nav class="catalog__pagination container" aria-label="Pagination">
+          <button class="catalog__page-btn btn btn--secondary">&lt;</button>
+          <button
+            class="catalog__page-btn catalog__page-btn--active btn btn--secondary"
+          >
+            1
+          </button>
+          <button class="catalog__page-btn btn btn--secondary">2</button>
+          <button class="catalog__page-btn btn btn--secondary">3</button>
+          <span class="catalog__dots">...</span>
+          <button class="catalog__page-btn btn btn--secondary">12</button>
+          <button class="catalog__page-btn btn btn--secondary">&gt;</button>
+          <button class="catalog__page-btn btn btn--secondary">&gt;&gt;</button>
+        </nav>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="./src/index.js" defer></script>
+  </body>
+</html>
