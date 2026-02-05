@@ -1,5 +1,3 @@
-// import "./src/styles/index.scss";
-
 const isProd = import.meta.env.PROD;
 function getPath(file) {
   return isProd ? ` ./partials/${file}` : `./src/partials/${file}`;
@@ -13,7 +11,7 @@ async function loadHTML(id, path) {
 
   const res = await fetch(path);
   const html = await res.text();
-  container.innerHTML = html;
+  container.outerHTML = html;
 }
 
 loadHTML("header", getPath("header.html"));

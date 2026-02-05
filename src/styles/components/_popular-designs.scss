@@ -16,9 +16,13 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     text-align: center;
     text-align: center;
+  }
+
+  &__subheading {
+    font-size: $font-subtitle;
   }
 
   &__grid {

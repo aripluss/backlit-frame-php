@@ -34,7 +34,7 @@
     font-size: $font-xs;
     font-weight: 700;
     letter-spacing: 1.5px;
-    border-radius: 50px;
+    border-radius: $radius-pill;
 
     &.badge--origin {
       color: var(--accent-text-color);
@@ -56,6 +56,8 @@
   }
 
   &__description {
+    font-size: $font-subtitle;
+    font-weight: $fw-bold;
     color: var(--secondary-text-color);
   }
 
@@ -79,11 +81,15 @@
 
   &__image-frame {
     position: relative;
+    min-block-size: 196px;
     inline-size: 100%;
     max-inline-size: 584px;
     aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: $radius-xl;
+    @include respond(md) {
+      min-block-size: 334px;
+    }
   }
 
   &__image {

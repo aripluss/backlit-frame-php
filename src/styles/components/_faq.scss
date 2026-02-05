@@ -4,19 +4,29 @@
   background-color: white;
 
   &__container {
-    max-inline-size: 832px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    align-items: center;
+    gap: 32px;
+    @include respond(md) {
+      gap: 48px;
+    }
   }
 
   &__title {
     text-align: center;
   }
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    max-inline-size: 832px;
+  }
+
   &__item {
     border: 1px solid var(--border-color);
-    border-radius: $radius-lg;
+    border-radius: $radius-md;
     margin-bottom: $radius-md;
     overflow: hidden;
   }

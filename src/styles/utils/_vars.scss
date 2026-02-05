@@ -15,7 +15,7 @@
   // borders
   --border-color: #e5e7eb;
   // shadow
-  --shadow-grey-color: #e2e8f0;
+  --shadow-grey-color: #e2e8f080;
   --shadow-color: #fde68a;
   // fonts
   --font-main: "Poppins", sans-serif;
@@ -26,6 +26,7 @@
 $font-xs: 12px; // nav links & badge
 $font-sm: 14px; // btns & card text & form labels & footer text
 $font-md: 16px; // base & h4
+$font-subtitle: 18px; // subtitle
 $font-h3: 24px; // h3
 $font-lg: 30px; // h2 mobile
 $font-xl: 36px; // h1 mobile & h2 >mobile
@@ -39,12 +40,15 @@ $fw-semibold: 600;
 $fw-bold: 700;
 
 // radius
+$radius-sm: 10px; // icons (how it works section)
 $radius-md: 12px; // reviews cards
 $radius-lg: 16px; // cards images
-$radius-xl: 32px; // gif video
-$radius-2xl: 40px; // contact form card
-$radius-round: 50px;
+$radius-xl: 25px; // Hero image & cta (steps to order section)
+$radius-2xl: 32px; // gif video
+$radius-3xl: 40px; // contact form card
+$radius-pill: 50px;
 
-// styles
+// shadow
 $shadow-default: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-$shadow-yellow: 0 10px 15px -3px #fde68a;
+$shadow-card: 0 20px 25px -5px var(--shadow-grey-color);
+$shadow-yellow: 0 10px 15px -3px var(--shadow-color);
