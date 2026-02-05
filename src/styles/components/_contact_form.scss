@@ -9,9 +9,9 @@
     margin-inline: auto;
     padding: 32px;
     background-color: var(--bgr-color);
-    border-radius: $radius-2xl;
+    border-radius: $radius-3xl;
     border: 1px solid var(--border-color);
-    box-shadow: $shadow-default;
+    box-shadow: $shadow-card;
 
     @include respond(md) {
       padding: 48px;
@@ -35,7 +35,7 @@
 
   &__subtitle {
     color: var(--tertiary-text-color);
-    font-size: $font-md;
+    font-size: $font-subtitle;
   }
 
   // form

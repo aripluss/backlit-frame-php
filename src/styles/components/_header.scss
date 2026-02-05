@@ -13,13 +13,13 @@
   }
 
   &__container {
-    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 6px;
 
     .logo {
+      padding-block: 16px;
       display: none;
       &--small {
         display: block;
@@ -41,7 +41,6 @@
       margin-left: auto;
       padding-block: 8px;
       padding-inline: 12px;
-      border-radius: 100px;
       font-size: $font-sm;
       line-height: 20px;
       font-weight: $fw-semibold;
@@ -69,6 +68,8 @@
     }
 
     &__link {
+      padding-block: 20px;
+      block-size: 100%;
       font-size: $font-xs;
       font-weight: $fw-medium;
       color: var(--secondary-text-color);
