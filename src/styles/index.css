@@ -50,6 +50,12 @@ h1 {
 }
 @media (min-width: 768px) {
   h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  h1 {
     font-size: 86px;
     line-height: 60px;
   }
@@ -913,7 +919,7 @@ body.page-catalog .header__navigation {
   color: var(--secondary-text-color);
 }
 .contact-form__input {
-  padding-inline: 20px;
+  padding-inline: 16px;
   padding-block: 16px;
   border-radius: 16px;
   border: 1px solid var(--border-color);
@@ -950,17 +956,12 @@ body.page-catalog .header__navigation {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-inline: 20px;
+  padding-inline: 10px;
   padding-block: 16px;
   border-radius: 16px;
   border: 1px solid var(--border-color);
   cursor: pointer;
   transition: all 0.3s ease;
-}
-@media (min-width: 768px) {
-  .contact-form__option {
-    padding-inline: 10px;
-  }
 }
 .contact-form__option:hover {
   border-color: var(--accent-color);
