@@ -115,7 +115,7 @@ section {
   font-family: var(--font-main);
   font-size: $font-md;
   font-weight: $fw-bold;
-  line-height: 22px;
+  line-height: 24px;
 
   cursor: pointer;
   border: none;
@@ -128,10 +128,10 @@ section {
   &--primary {
     background-color: var(--accent-color);
     color: white;
-    box-shadow: $shadow-yellow;
 
     &:hover,
     &:focus-visible {
+      box-shadow: $shadow-yellow;
       background-color: var(--accent-text-color);
     }
 
@@ -190,6 +190,18 @@ section {
       transform: scale(0.95);
     }
   }
+}
+
+.badge {
+  display: inline-block;
+  padding-inline: 16px;
+  padding-block: 6px;
+  font-size: $font-xs;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: $radius-pill;
+  color: var(--accent-text-color);
+  background-color: var(--bgr-badge);
 }
 
 // Custom scrollbar

@@ -27,21 +27,6 @@
     }
   }
 
-  &__badge {
-    display: inline-block;
-    padding-inline: 16px;
-    padding-block: 6px;
-    font-size: $font-xs;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    border-radius: $radius-pill;
-
-    &.badge--origin {
-      color: var(--accent-text-color);
-      background-color: var(--bgr-badge);
-    }
-  }
-
   &__title {
     @include respond(lg) {
       line-height: 60px;

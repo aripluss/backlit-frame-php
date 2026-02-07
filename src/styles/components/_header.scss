@@ -106,9 +106,11 @@
   }
 }
 
-body.page-catalog .header__navigation {
+body.catalog-page .header__navigation,
+body.product-page .header__navigation {
   display: none;
 }
-body.page-catalog .header .burger {
+body.catalog-page .header .burger,
+body.product-page .header .burger {
   display: none;
 }
