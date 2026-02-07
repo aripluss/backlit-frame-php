@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 main {
@@ -46,18 +48,16 @@ main {
 h1 {
   font-family: var(--font-headers);
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
 }
 @media (min-width: 768px) {
   h1 {
     font-size: 60px;
-    line-height: 60px;
   }
 }
 @media (min-width: 1440px) {
   h1 {
     font-size: 86px;
-    line-height: 60px;
   }
 }
 
@@ -350,11 +350,6 @@ body.page-catalog .header .burger {
     flex: 1;
   }
 }
-@media (min-width: 1440px) {
-  .footer__container {
-    gap: auto;
-  }
-}
 .footer__logo-and-motto {
   display: flex;
   flex-direction: column;
@@ -429,6 +424,11 @@ body.page-catalog .header .burger {
 .hero__badge.badge--origin {
   color: var(--accent-text-color);
   background-color: var(--bgr-badge);
+}
+@media (min-width: 1440px) {
+  .hero__title {
+    line-height: 60px;
+  }
 }
 .hero__title, .hero__description {
   text-align: center;
@@ -1187,4 +1187,35 @@ body.page-catalog .header .burger {
 }
 .catalog .catalog__text {
   font-size: 14px;
+}
+
+.pagination__wrapper {
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+@media (min-width: 768px) {
+  .pagination__wrapper {
+    justify-content: space-between;
+    max-width: 832px;
+  }
+}
+.pagination__page-btn {
+  padding-inline: 6px;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+@media (min-width: 768px) {
+  .pagination__page-btn {
+    padding-inline: 32px;
+    flex: 0 1 auto;
+  }
+}
+.pagination__dots {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  flex: 0 0 auto;
 }/*# sourceMappingURL=index.css.map */

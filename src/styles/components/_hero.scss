@@ -42,6 +42,12 @@
     }
   }
 
+  &__title {
+    @include respond(lg) {
+      line-height: 60px;
+    }
+  }
+
   &__title,
   &__description {
     text-align: center;

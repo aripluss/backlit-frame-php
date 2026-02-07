@@ -1,28 +1,23 @@
 export const catalogItems = [
   {
+    image: "./images/backlit-frame-lightbox-leap-of-faith.png",
+    alt: "Стрибок віри",
+    title: "Стрибок віри",
+    text: "Гра: Асассин Крид",
+  },
+  {
+    image: "./images/backlit-frame-lightbox-eren-end-mikasa.jpg",
+    alt: "Ерен та Мікаса",
+    title: "Ерен та Мікаса",
+    text: "Аніме: Атака титанів",
+  },
+  {
     image: "./images/backlit-frame-lightbox-romantic-photo.png",
     alt: "Романтика / персональні фото",
     title: "Парний портрет",
     text: "Романтика",
   },
-  {
-    image: "./images/backlit-frame-lightbox-game-character.webp",
-    alt: "Асассин Крид",
-    title: "Еціо Аудиторе",
-    text: "Гра: Асассин Крид",
-  },
-  {
-    image: "./images/backlit-frame-lightbox-car.png",
-    alt: "Автомобілі",
-    title: "Ламборгіні",
-    text: "Автомобіль",
-  },
-  {
-    image: "./images/backlit-frame-lightbox-abstract.png",
-    alt: "Абстракція",
-    title: "Геометричні форми",
-    text: "Абстракція",
-  },
+
   {
     image: "./images/backlit-frame-lightbox-space-2.png",
     alt: "Космос",
@@ -30,33 +25,59 @@ export const catalogItems = [
     text: "Космос: Галактика",
   },
   {
+    image: "./images/backlit-frame-lightbox-itachi-uchiha.webp",
+    alt: "Ітачі Учіха",
+    title: "Ітачі Учіха",
+    text: "Аніме: Наруто",
+  },
+  {
+    image: "./images/backlit-frame-lightbox-dog.png",
+    alt: "Золотистий ретривер",
+    title: "Золотистий ретривер",
+    text: "Тварини: собака",
+  },
+  // {
+  //   image: "./images/",
+  //   alt: "Автомобілі",
+  //   title: "Ламборгіні",
+  //   text: "Автомобіль",
+  // },
+  {
+    image: "./images/backlit-frame-lightbox-abstraction.png",
+    alt: "Кіберсхема",
+    title: "Кіберсхема",
+    text: "Абстракція",
+  },
+  {
     image: "./images/backlit-frame-lightbox-daenerys-with-drogon.png",
     alt: "Гра престолів",
     title: "Дейнеріс Таргарієн та Дрогон",
     text: "Серіал: Гра престолів",
   },
+
   {
-    image: "./images/backlit-frame-lightbox-nature.png",
-    alt: "Природа",
+    image: "./images/backlit-frame-lightbox-mountain.png",
+    alt: "Гора",
     title: "Гірський пейзаж",
-    text: "Природа: Гармонія пейзажів та природної атмосфери.",
+    text: "Природа",
   },
+
   {
-    image: "./images/backlit-frame-lightbox-dog.png",
-    alt: "Лабрадор",
-    title: "Лабрадор",
-    text: "Тварини: Портрет Вашого улюбленця в інтер’єрі.",
-  },
-  {
-    image: "./images/backlit-frame-lightbox-itachi-uchiha.webp",
-    alt: "Аніме",
-    title: "Ітачі Учіха",
+    image: "./images/backlit-frame-lightbox-itachi.jpg",
+    alt: "Ітачі",
+    title: "Ітачі",
     text: "Аніме: Наруто",
   },
   {
-    image: "./images/backlit-frame-lightbox-itachi-uchiha.webp",
-    alt: "Ерен та Мікаса",
-    title: "Ерен та Мікаса",
-    text: "Аніме: Атака титанів",
+    image: "./images/backlit-frame-lightbox-dog-profile.png",
+    alt: "Профіль собаки",
+    title: "Профіль собаки",
+    text: "Тварини: собака",
+  },
+  {
+    image: "./images/backlit-frame-lightbox-space.png",
+    alt: "Небесні тіла",
+    title: "Небесні тіла",
+    text: "Космос",
   },
 ];
