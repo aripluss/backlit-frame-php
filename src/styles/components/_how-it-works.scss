@@ -101,6 +101,7 @@
     box-shadow: $shadow-default;
     height: 100%;
     block-size: 506px;
+    box-shadow: $shadow-card;
 
     @include respond(lg) {
       flex: 1;

@@ -5,8 +5,10 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: var(--bgr-white-color);
-  border-color: var(--border-color);
+  background-color: rgb(255 255 255 / 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   box-shadow: $shadow-default var(--shadow-color);
   @include respond(md) {
     gap: 24px;
@@ -51,20 +53,63 @@
   }
 
   &__navigation {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: auto;
+    // transform: translateY(-100%);
+    transform: translateY(-16px);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      background-color: rgb(255 255 255 / 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      transform: translateY(0);
+      justify-content: start;
+      height: calc(100vh - 100%);
+      padding-top: 40px;
+      opacity: 1;
+      visibility: visible;
+
+      .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 84px;
+      }
+
+      .nav__link {
+        font-size: $font-h3;
+      }
+    }
 
     @include respond(md) {
+      opacity: 1;
+      visibility: visible;
+      width: auto;
       display: block;
+      position: static;
+      left: auto;
+      overflow: unset;
+      transform: none;
+      flex-direction: row;
+
+      .nav__list {
+        flex-direction: row;
+        gap: clamp(32px, 6vw, 84px);
+      }
     }
   }
 
   .nav {
     &__list {
-      list-style: none;
       display: flex;
-      margin: 0;
-      padding: 0;
-      gap: clamp(32px, 6vw, 84px);
     }
 
     &__link {
@@ -104,4 +149,13 @@
       transition: transform 0.25s ease;
     }
   }
+}
+
+body.catalog-page .header__navigation,
+body.product-page .header__navigation {
+  display: none;
+}
+body.catalog-page .header .burger,
+body.product-page .header .burger {
+  display: none;
 }

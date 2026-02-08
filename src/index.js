@@ -1,26 +1,22 @@
-const isProd = import.meta.env.PROD;
-function getPath(file) {
-  return isProd ? ` ./partials/${file}` : `./src/partials/${file}`;
+import { loadHTML, getPath } from "./js/utils.js";
+import { initCatalog } from "./js/init-catalog.js";
+import { initBurgerMenu } from "./js/burger.js";
+import { popularDesignsItems } from "./data/popular-designs-items.js";
+
+async function initPage() {
+  await loadHTML("header", getPath("header.html"));
+  initBurgerMenu();
+  await loadHTML("hero", getPath("main-page/hero.html"));
+  await loadHTML("popular-designs", getPath("main-page/popular-designs.html"));
+  await loadHTML("how-it-works", getPath("main-page/how-it-works.html"));
+  await loadHTML("why-we", getPath("main-page/why-we.html"));
+  await loadHTML("steps-to-order", getPath("main-page/steps-to-order.html"));
+  await loadHTML("feedback", getPath("main-page/feedback.html"));
+  await loadHTML("faq", getPath("main-page/faq.html"));
+  await loadHTML("contact_form", getPath("main-page/contact_form.html"));
+  await loadHTML("footer", getPath("footer.html"));
+
+  initCatalog(".popular-designs__grid", popularDesignsItems);
 }
 
-async function loadHTML(id, path) {
-  const container = document.getElementById(id);
-
-  if (!container) return;
-  container.innerHTML = "";
-
-  const res = await fetch(path);
-  const html = await res.text();
-  container.outerHTML = html;
-}
-
-loadHTML("header", getPath("header.html"));
-loadHTML("hero", getPath("main-page/hero.html"));
-loadHTML("popular-designs", getPath("main-page/popular-designs.html"));
-loadHTML("how-it-works", getPath("main-page/how-it-works.html"));
-loadHTML("why-we", getPath("main-page/why-we.html"));
-loadHTML("steps-to-order", getPath("main-page/steps-to-order.html"));
-loadHTML("feedback", getPath("main-page/feedback.html"));
-loadHTML("faq", getPath("main-page/faq.html"));
-loadHTML("contact_form", getPath("main-page/contact_form.html"));
-loadHTML("footer", getPath("footer.html"));
+initPage();

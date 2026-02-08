@@ -28,7 +28,7 @@
       }
     }
     @include respond(lg) {
-      gap: auto;
+      // gap: auto;
     }
   }
 
@@ -37,6 +37,10 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    @include respond(md) {
+      align-items: start;
+    }
   }
 
   &__text,
