@@ -78,6 +78,7 @@
     aspect-ratio: 16/9;
     overflow: hidden;
     border-radius: $radius-xl;
+    box-shadow: $shadow-card;
     @include respond(md) {
       min-block-size: 334px;
     }

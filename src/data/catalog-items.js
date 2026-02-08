@@ -3,13 +3,13 @@ export const catalogItems = [
     image: "./images/backlit-frame-lightbox-leap-of-faith.png",
     alt: "Стрибок віри",
     title: "Стрибок віри",
-    text: "Гра: Асассин Крид",
+    text: "Гра: Кредо вбивці / Assassin's Creed",
   },
   {
     image: "./images/backlit-frame-lightbox-eren-end-mikasa.jpg",
     alt: "Ерен та Мікаса",
     title: "Ерен та Мікаса",
-    text: "Аніме: Атака титанів",
+    text: "Аніме: Атака титанів / Attack on Titan",
   },
   {
     image: "./images/backlit-frame-lightbox-romantic-photo.png",
@@ -28,7 +28,7 @@ export const catalogItems = [
     image: "./images/backlit-frame-lightbox-itachi-uchiha.webp",
     alt: "Ітачі Учіха",
     title: "Ітачі Учіха",
-    text: "Аніме: Наруто",
+    text: "Аніме: Наруто / Naruto",
   },
   {
     image: "./images/backlit-frame-lightbox-dog.png",
@@ -52,7 +52,7 @@ export const catalogItems = [
     image: "./images/backlit-frame-lightbox-daenerys-with-drogon.png",
     alt: "Гра престолів",
     title: "Дейнеріс Таргарієн та Дрогон",
-    text: "Серіал: Гра престолів",
+    text: "Серіал: Гра престолів / Game of Thrones",
   },
 
   {
@@ -66,7 +66,7 @@ export const catalogItems = [
     image: "./images/backlit-frame-lightbox-itachi.jpg",
     alt: "Ітачі",
     title: "Ітачі",
-    text: "Аніме: Наруто",
+    text: "Аніме: Наруто / Naruto",
   },
   {
     image: "./images/backlit-frame-lightbox-dog-profile.png",

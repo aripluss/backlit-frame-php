@@ -64,6 +64,8 @@ p {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -123,7 +125,8 @@ section {
   transition:
     background-color 0.25s ease,
     color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
   &--primary {
     background-color: var(--accent-color);

@@ -22,7 +22,10 @@
     max-width: 720px;
     width: 100%;
     margin-inline: auto;
+    box-shadow: $shadow-card;
     @include respond(lg) {
+      flex-shrink: 0;
+      max-height: 660px;
       inline-size: 568px;
     }
   }
@@ -62,6 +65,10 @@
     font-family: var(--font-headers);
   }
 
+  &__benefit {
+    color: var(--accent-color);
+  }
+
   &__accent {
     color: var(--accent-text-color);
   }
@@ -88,8 +95,16 @@
   }
 
   &__size--active {
-    background-color: var(--bgr-dark-color);
+    background-color: var(--primary-text-color);
     color: white;
+    &:hover,
+    &:focus-visible {
+      background-color: var(--bgr-dark-color);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   // OPTION

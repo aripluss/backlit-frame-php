@@ -85,6 +85,8 @@ p {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -144,7 +146,7 @@ section {
   cursor: pointer;
   border: none;
   text-decoration: none;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .btn--primary {
   background-color: var(--accent-color);
@@ -231,8 +233,10 @@ section {
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: var(--bgr-white-color);
-  border-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) var(--shadow-color);
 }
 @media (min-width: 768px) {
@@ -278,19 +282,57 @@ section {
   }
 }
 .header__navigation {
-  display: none;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: auto;
+  transform: translateY(-16px);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.header__navigation.active {
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  transform: translateY(0);
+  justify-content: start;
+  height: calc(100vh - 100%);
+  padding-top: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+.header__navigation.active .nav__list {
+  flex-direction: column;
+  align-items: center;
+  gap: 84px;
+}
+.header__navigation.active .nav__link {
+  font-size: 24px;
 }
 @media (min-width: 768px) {
   .header__navigation {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
     display: block;
+    position: static;
+    left: auto;
+    overflow: unset;
+    transform: none;
+    flex-direction: row;
+  }
+  .header__navigation .nav__list {
+    flex-direction: row;
+    gap: clamp(32px, 6vw, 84px);
   }
 }
 .header .nav__list {
-  list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  gap: clamp(32px, 6vw, 84px);
 }
 .header .nav__link {
   padding-block: 20px;
@@ -473,6 +515,7 @@ body.product-page .header .burger {
   aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: 25px;
+  box-shadow: 0 20px 25px -5px var(--shadow-grey-color);
 }
 @media (min-width: 768px) {
   .hero__image-frame {
@@ -658,6 +701,7 @@ body.product-page .header .burger {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   height: 100%;
   block-size: 506px;
+  box-shadow: 0 20px 25px -5px var(--shadow-grey-color);
 }
 @media (min-width: 1440px) {
   .how-it-works__preview {
@@ -1133,6 +1177,7 @@ body.product-page .header .burger {
 .catalog-controls__subtitle {
   color: var(--accent-text-color);
 }
+
 .catalog {
   background-color: var(--bgr-white-color);
 }
@@ -1173,6 +1218,7 @@ body.product-page .header .burger {
   }
 }
 .catalog .catalog__image-wrapper {
+  background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
   position: relative;
   overflow: hidden;
   aspect-ratio: 1/1;
@@ -1180,6 +1226,7 @@ body.product-page .header .burger {
   margin-bottom: 16px;
 }
 .catalog .catalog__image {
+  position: absolute;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1260,9 +1307,12 @@ body.product-page .header .burger {
   max-width: 720px;
   width: 100%;
   margin-inline: auto;
+  box-shadow: 0 20px 25px -5px var(--shadow-grey-color);
 }
 @media (min-width: 1440px) {
   .product__image-wrapper {
+    flex-shrink: 0;
+    max-height: 660px;
     inline-size: 568px;
   }
 }
@@ -1298,6 +1348,9 @@ body.product-page .header .burger {
 .product__title {
   font-family: var(--font-headers);
 }
+.product__benefit {
+  color: var(--accent-color);
+}
 .product__accent {
   color: var(--accent-text-color);
 }
@@ -1320,8 +1373,14 @@ body.product-page .header .burger {
   gap: 12px;
 }
 .product__size--active {
-  background-color: var(--bgr-dark-color);
+  background-color: var(--primary-text-color);
   color: white;
+}
+.product__size--active:hover, .product__size--active:focus-visible {
+  background-color: var(--bgr-dark-color);
+}
+.product__size--active:active {
+  transform: scale(0.95);
 }
 .product__option {
   display: flex;

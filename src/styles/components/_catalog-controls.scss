@@ -24,9 +24,6 @@
   }
 
   &__filters {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -79,8 +76,5 @@
 
   &__subtitle {
     color: var(--accent-text-color);
-  }
-
-  .btn.btn--secondary.catalog__filter-btn {
   }
 }
