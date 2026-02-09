@@ -1,16 +1,9 @@
 @use "../utils" as *;
 
 .catalog-controls {
-  padding-block-start: 104px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @include respond(md) {
-    padding-block-start: 124px;
-  }
-  @include respond(lg) {
-    padding-block-start: 144px;
-  }
 
   &__header-wrapper {
     display: flex;
