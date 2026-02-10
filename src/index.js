@@ -1,6 +1,7 @@
 import { loadHTML, getPath } from "./js/utils.js";
 import { initCatalog } from "./js/init-catalog.js";
 import { initBurgerMenu } from "./js/burger.js";
+import { initFooterYear } from "./js/footer-year.js";
 import { popularDesignsItems } from "./data/popular-designs-items.js";
 
 async function initPage() {
@@ -19,6 +20,7 @@ async function initPage() {
   await loadHTML("contact_form", getPath("main-page/contact_form.html"));
 
   await loadHTML("footer", getPath("footer.html"));
+  initFooterYear();
 
   initCatalog(".popular-designs__grid", popularDesignsItems);
 }

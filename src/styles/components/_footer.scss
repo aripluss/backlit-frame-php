@@ -27,9 +27,6 @@
         flex: 1;
       }
     }
-    @include respond(lg) {
-      // gap: auto;
-    }
   }
 
   &__logo-and-motto {
