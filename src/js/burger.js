@@ -1,24 +1,34 @@
 export function initBurgerMenu() {
   const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".header__navigation");
-  const navLinks = document.querySelectorAll(".nav__link");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navLinks = mobileMenu?.querySelectorAll(".nav__link");
 
-  if (burger && nav) {
-    burger.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  }
+  if (!burger || !mobileMenu) return;
 
-  navLinks.forEach((link) => {
+  const toggleMenu = () => {
+    const isOpen = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", !isOpen);
+    mobileMenu.classList.toggle("is-open");
+    document.body.classList.toggle("no-scroll");
+  };
+
+  // Клік по бургеру
+  burger.addEventListener("click", toggleMenu);
+
+  // Клік по пункту меню - закрити меню
+  navLinks?.forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("active");
+      burger.setAttribute("aria-expanded", false);
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("no-scroll");
     });
   });
 
-  window.addEventListener("resize", () => {
-    // close burger when resizing
-    if (window.innerWidth >= 768) {
-      nav.classList.remove("active");
-    }
+  // Закрити модалку при ресайзі
+  window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
+    if (!e.matches) return;
+    burger.setAttribute("aria-expanded", false);
+    mobileMenu.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
   });
 }

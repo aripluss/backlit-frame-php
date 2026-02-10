@@ -36,12 +36,6 @@ export const catalogItems = [
     title: "Золотистий ретривер",
     text: "Тварини: собака",
   },
-  // {
-  //   image: "./images/",
-  //   alt: "Автомобілі",
-  //   title: "Ламборгіні",
-  //   text: "Автомобіль",
-  // },
   {
     image: "./images/backlit-frame-lightbox-abstraction.png",
     alt: "Кіберсхема",
