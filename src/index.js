@@ -5,7 +5,8 @@ import { popularDesignsItems } from "./data/popular-designs-items.js";
 
 async function initPage() {
   await loadHTML("header", getPath("header.html"));
-  await loadHTML("mobile-menu", getPath("mobile-menu.html"));
+
+  await loadHTML("mobile-menu", getPath("main-page/mobile-menu.html"));
   initBurgerMenu();
 
   await loadHTML("hero", getPath("main-page/hero.html"));
