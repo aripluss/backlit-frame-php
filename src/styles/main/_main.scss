@@ -86,7 +86,7 @@ img {
 }
 
 section {
-  scroll-margin-top: 64px;
+  scroll-margin-top: var(--header-height);
   padding-block: 40px;
 
   @include respond(md) {

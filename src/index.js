@@ -2,6 +2,7 @@ import { loadHTML, getPath } from "./js/utils.js";
 import { initCatalog } from "./js/init-catalog.js";
 import { initBurgerMenu } from "./js/burger.js";
 import { initFooterYear } from "./js/footer-year.js";
+import { initToggleHeroImage } from "./js/toggle-hero-image.js";
 import { popularDesignsItems } from "./data/popular-designs-items.js";
 
 async function initPage() {
@@ -11,6 +12,8 @@ async function initPage() {
   initBurgerMenu();
 
   await loadHTML("hero", getPath("main-page/hero.html"));
+  initToggleHeroImage();
+
   await loadHTML("popular-designs", getPath("main-page/popular-designs.html"));
   await loadHTML("how-it-works", getPath("main-page/how-it-works.html"));
   await loadHTML("why-we", getPath("main-page/why-we.html"));

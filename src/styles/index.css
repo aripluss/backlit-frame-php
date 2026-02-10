@@ -106,7 +106,7 @@ img {
 }
 
 section {
-  scroll-margin-top: 64px;
+  scroll-margin-top: var(--header-height);
   padding-block: 40px;
 }
 @media (min-width: 768px) {
@@ -723,7 +723,8 @@ body.product-page .header .burger {
     block-size: 432px;
   }
 }
-.how-it-works__gif {
+.how-it-works__preview > video {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
