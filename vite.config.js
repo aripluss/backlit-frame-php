@@ -22,6 +22,10 @@ export default defineConfig({
           src: "src/partials",
           dest: "",
         },
+        {
+          src: "images",
+          dest: "",
+        },
       ],
     }),
   ],

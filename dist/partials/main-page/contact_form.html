@@ -10,83 +10,86 @@
         </p>
       </div>
 
-      <div
+      <form
+        action="/app/handlers/order-handler.php"
+        method="POST"
         class="contact-form__form"
         @submit.prevent="alert('Дякуємо! Ми звʼяжемося з вами обраним способом.')"
       >
-            <div class="contact-form__wrapper">
-        <div class="contact-form__fields">
-          <div class="contact-form__field">
-            <label class="contact-form__label">Ваше ім'я</label>
-            <input
-              type="text"
-              required
-              placeholder="Ірина"
-              class="contact-form__input"
-            />
+        <div class="contact-form__wrapper">
+          <div class="contact-form__fields">
+            <div class="contact-form__field">
+              <label class="contact-form__label">Ваше ім'я</label>
+              <input
+                type="text"
+                required
+                placeholder="Ірина"
+                class="contact-form__input"
+              />
+            </div>
+            <div class="contact-form__field">
+              <label class="contact-form__label">Номер телефону</label>
+              <input
+                type="tel"
+                required
+                placeholder="+38 (0_ _ )_ _ _ _ _ _ _"
+                class="contact-form__input"
+              />
+            </div>
           </div>
-          <div class="contact-form__field">
-            <label class="contact-form__label">Номер телефону</label>
-            <input
-              type="tel"
-              required
-              placeholder="+38 (0_ _ )_ _ _ _ _ _ _"
-              class="contact-form__input"
-            />
-          </div>
+
+          <fieldset class="contact-form__fieldset">
+            <legend class="contact-form__legend">Бажаний спосіб зв’язку</legend>
+
+            <div class="contact-form__options">
+              <label class="contact-form__option">
+                <input
+                  type="radio"
+                  name="contact_method"
+                  value="call"
+                  checked
+                  class="contact-form__radio"
+                />
+                <span class="contact-form__option-text">📞 Дзвінок</span>
+              </label>
+
+              <label class="contact-form__option">
+                <input
+                  type="radio"
+                  name="contact_method"
+                  value="Viber"
+                  class="contact-form__radio"
+                />
+                <span class="contact-form__option-text">💬 Viber</span>
+              </label>
+
+              <label class="contact-form__option">
+                <input
+                  type="radio"
+                  name="contact_method"
+                  value="Telegram"
+                  class="contact-form__radio"
+                />
+                <span class="contact-form__option-text">💬 Telegram</span>
+              </label>
+
+              <label class="contact-form__option">
+                <input
+                  type="radio"
+                  name="contact_method"
+                  value="WhatsApp"
+                  class="contact-form__radio"
+                />
+                <span class="contact-form__option-text">💬 WhatsApp</span>
+              </label>
+            </div>
+          </fieldset>
         </div>
 
-        <fieldset class="contact-form__fieldset">
-          <legend class="contact-form__legend">Бажаний спосіб зв’язку</legend>
-
-          <div class="contact-form__options">
-            <label class="contact-form__option">
-              <input
-                type="radio"
-                name="contact_method"
-                value="call"
-                checked
-                class="contact-form__radio"
-              />
-              <span class="contact-form__option-text"
-                >📞  Дзвінок</span
-              >
-            </label>
-
-            <label class="contact-form__option">
-              <input
-                type="radio"
-                name="contact_method"
-                value="Viber"
-                class="contact-form__radio"
-              />
-              <span class="contact-form__option-text">💬  Viber</span>
-            </label>
-
-            <label class="contact-form__option">
-              <input
-                type="radio"
-                name="contact_method"
-                value="Telegram"
-                class="contact-form__radio"
-              />
-              <span class="contact-form__option-text">💬  Telegram</span>
-            </label>
-
-            <label class="contact-form__option">
-              <input
-                type="radio"
-                name="contact_method"
-                value="WhatsApp"
-                class="contact-form__radio"
-              />
-              <span class="contact-form__option-text">💬  WhatsApp</span>
-            </label>
-          </div>
-        </fieldset>
-    </div>
-
-        <button type="submit" class="contact-form__submit-btn btn btn--tertiary">
+        <button
+          type="submit"
+          class="contact-form__submit-btn btn btn--tertiary"
+        >
           <span>Надіслати запит</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -580,13 +580,13 @@ body.product-page .header .burger {
   font-size: 18px;
   color: var(--tertiary-text-color);
 }
-.popular-designs__grid {
+.popular-designs .catalog__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 @media (min-width: 1440px) {
-  .popular-designs__grid {
+  .popular-designs .catalog__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -774,8 +774,6 @@ body.product-page .header .burger {
 
 .custom {
   background-color: var(--bgr-white-color);
-  /* steps */
-  /* CTA */
 }
 .custom__container {
   display: flex;
@@ -789,6 +787,9 @@ body.product-page .header .burger {
 }
 .custom__title {
   text-align: center;
+}
+.custom {
+  /* steps */
 }
 .custom__steps {
   display: grid;
@@ -840,6 +841,9 @@ body.product-page .header .burger {
 }
 .custom__step-text {
   font-size: 14px;
+}
+.custom {
+  /* CTA */
 }
 .custom__cta {
   padding: 32px;

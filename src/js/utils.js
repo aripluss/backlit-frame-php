@@ -1,4 +1,6 @@
-export const isProd = import.meta.env.PROD;
+// export const isProd = import.meta.env.PROD;
+
+const isProd = false;
 export function getPath(file) {
   return isProd ? ` ./partials/${file}` : `./src/partials/${file}`;
 }
