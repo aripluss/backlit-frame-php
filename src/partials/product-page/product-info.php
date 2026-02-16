@@ -19,11 +19,17 @@ require __DIR__ . '/product-logic.php';
       data-custom="<?= $product->customDesign ? '1' : '0' ?>" data-base-price="<?= $productData['basePrice'] ?>">
 
       <div class="product__text-wrapper">
-        <h3 class="product__title">
+        <h3 class="product__title">LED світильник
           <?= htmlspecialchars($product->title) ?>
+          <span class="product__origin"><?= htmlspecialchars($product->origin) ?></span>
         </h3>
+
         <p class="product__description">
-          <?= htmlspecialchars($productData['text']) ?>
+          <?= htmlspecialchars($product->description) ?>
+        </p>
+
+        <p class="product__benefit">
+          <?= htmlspecialchars($product->benefit) ?>
         </p>
       </div>
 
@@ -43,7 +49,8 @@ require __DIR__ . '/product-logic.php';
       <!-- Checkbox -->
       <label class="product__option">
         <input type="checkbox" class="product__checkbox" <?= $product->customDesign ? 'checked' : '' ?> />
-        Індивідуальний макет (+350 грн)
+        Індивідуальний макет (+
+        <?= $product::CUSTOM_PRICE ?> грн)
       </label>
 
       <!-- Price -->

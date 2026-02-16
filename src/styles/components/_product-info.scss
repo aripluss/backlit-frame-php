@@ -66,10 +66,10 @@
   }
 
   &__benefit {
-    color: var(--accent-color);
+    color: var(--accent-text-color);
   }
 
-  &__accent {
+  &__origin {
     color: var(--accent-text-color);
   }
 
@@ -154,6 +154,9 @@
   &__cta {
     @include respond(md) {
       align-self: center;
+    }
+    @include respond(lg) {
+      align-self: unset;
     }
   }
 }

@@ -1357,9 +1357,9 @@ body.product-page .header .burger {
   font-family: var(--font-headers);
 }
 .product__benefit {
-  color: var(--accent-color);
+  color: var(--accent-text-color);
 }
-.product__accent {
+.product__origin {
   color: var(--accent-text-color);
 }
 .product__sizes {
@@ -1425,5 +1425,10 @@ body.product-page .header .burger {
 @media (min-width: 768px) {
   .product__cta {
     align-self: center;
+  }
+}
+@media (min-width: 1440px) {
+  .product__cta {
+    align-self: unset;
   }
 }/*# sourceMappingURL=index.css.map */

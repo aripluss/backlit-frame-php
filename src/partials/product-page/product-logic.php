@@ -31,6 +31,9 @@ $product = new Product(
     $productData['title'],
     $productData['category'],
     $productData['image'],
+    $productData['origin'],
+    $productData['benefit'],
+    $productData['description'],
     $productData['basePrice']
 );
 

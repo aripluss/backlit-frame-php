@@ -7,6 +7,9 @@ class Product
     private $basePrice;
     protected $category;
     public string $image;
+    public string $origin;
+    public string $benefit;
+    public string $description;
     public string $selectedSize = 'A5';
 
     private const SIZE_EXTRAS = [
@@ -18,12 +21,23 @@ class Product
 
     public bool $customDesign = false;
 
-    public function __construct($id, $title, $category, $image, $basePrice)
-    {
+    public function __construct(
+        int $id,
+        string $title,
+        string $category,
+        string $image,
+        string $origin,
+        string $benefit,
+        string $description,
+        float $basePrice,
+    ) {
         $this->id = $id;
         $this->title = $title;
         $this->category = $category;
         $this->image = $image;
+        $this->origin = $origin;
+        $this->benefit = $benefit;
+        $this->description = $description;
         $this->basePrice = $basePrice;
     }
 
@@ -45,9 +59,9 @@ class SpecialProduct extends Product
 {
     private float $discount;
 
-    public function __construct($id, $title, $category, $image, $basePrice, $discount)
+    public function __construct($id, $title, $category, $image, $origin, $benefit, $description, $basePrice, $discount)
     {
-        parent::__construct($id, $title, $category, $image, $basePrice);
+        parent::__construct($id, $title, $category, $image, $origin, $benefit, $description, $basePrice);
         $this->discount = $discount;
     }
 
