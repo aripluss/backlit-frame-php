@@ -18,7 +18,7 @@ async function initPage() {
   await loadHTML("steps-to-order", getPath("main-page/steps-to-order.html"));
   await loadHTML("feedback", getPath("main-page/feedback.html"));
   await loadHTML("faq", getPath("main-page/faq.html"));
-  await loadHTML("contact_form", getPath("main-page/contact_form.html"));
+  await loadHTML("contact_form", getPath("main-page/contact_form.php"));
 
   await loadHTML("footer", getPath("footer.html"));
   initFooterYear();

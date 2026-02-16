@@ -6,7 +6,10 @@ $catalogItems = [
         "alt" => "Стрибок віри",
         "title" => "Стрибок віри",
         "text" => "Гра: Кредо вбивці / Assassin's Creed",
-        "category" => "Ігри"
+        "category" => "Ігри",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 2,
@@ -14,7 +17,10 @@ $catalogItems = [
         "alt" => "Ерен та Мікаса",
         "title" => "Ерен та Мікаса",
         "text" => "Аніме: Атака титанів / Attack on Titan",
-        "category" => "Аніме"
+        "category" => "Аніме",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 3,
@@ -22,7 +28,10 @@ $catalogItems = [
         "alt" => "Романтика / персональні фото",
         "title" => "Парний портрет",
         "text" => "Романтика",
-        "category" => "Романтика"
+        "category" => "Романтика",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 4,
@@ -30,7 +39,10 @@ $catalogItems = [
         "alt" => "Космос",
         "title" => "Галактика Андромеди",
         "text" => "Космос: Галактика",
-        "category" => "Космос"
+        "category" => "Космос",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 5,
@@ -38,7 +50,10 @@ $catalogItems = [
         "alt" => "Ітачі Учіха",
         "title" => "Ітачі Учіха",
         "text" => "Аніме: Наруто / Naruto",
-        "category" => "Аніме"
+        "category" => "Аніме",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 6,
@@ -46,7 +61,10 @@ $catalogItems = [
         "alt" => "Золотистий ретривер",
         "title" => "Золотистий ретривер",
         "text" => "Тварини: собака",
-        "category" => "Тварини"
+        "category" => "Тварини",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 7,
@@ -54,7 +72,10 @@ $catalogItems = [
         "alt" => "Кіберсхема",
         "title" => "Кіберсхема",
         "text" => "Абстракція",
-        "category" => "Абстракція"
+        "category" => "Абстракція",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 8,
@@ -62,7 +83,10 @@ $catalogItems = [
         "alt" => "Гра престолів",
         "title" => "Дейнеріс Таргарієн та Дрогон",
         "text" => "Серіал: Гра престолів / Game of Thrones",
-        "category" => "Серіали"
+        "category" => "Серіали",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 9,
@@ -70,7 +94,10 @@ $catalogItems = [
         "alt" => "Гора",
         "title" => "Гірський пейзаж",
         "text" => "Природа",
-        "category" => "Природа"
+        "category" => "Природа",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 10,
@@ -78,7 +105,10 @@ $catalogItems = [
         "alt" => "Ітачі",
         "title" => "Ітачі",
         "text" => "Аніме: Наруто / Naruto",
-        "category" => "Аніме"
+        "category" => "Аніме",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 11,
@@ -86,7 +116,10 @@ $catalogItems = [
         "alt" => "Профіль собаки",
         "title" => "Профіль собаки",
         "text" => "Тварини: собака",
-        "category" => "Тварини"
+        "category" => "Тварини",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
     [
         "id" => 12,
@@ -94,7 +127,11 @@ $catalogItems = [
         "alt" => "Небесні тіла",
         "title" => "Небесні тіла",
         "text" => "Космос",
-        "category" => "Космос"
+        "category" => "Космос",
+        "basePrice" => 1150,
+        "sizes" => ['A5', 'A4', 'A3'],
+        "customDesign" => false
     ],
+
 ];
 ?>

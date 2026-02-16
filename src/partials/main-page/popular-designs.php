@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', '/backlit-frame');
+define('BASE_URL', value: '/backlit-frame');
 require __DIR__ . '/../../data/popular-designs-items.php';
 $items = $popularDesignsItems;
 ?>
