@@ -50,7 +50,7 @@ require __DIR__ . '/product-logic.php';
       <label class="product__option">
         <input type="checkbox" class="product__checkbox" <?= $product->customDesign ? 'checked' : '' ?> />
         Індивідуальний макет (+
-        <?= $product::CUSTOM_PRICE ?> грн)
+        <?= $product->customPrice ?> грн)
       </label>
 
       <!-- Price -->

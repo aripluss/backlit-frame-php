@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/Config.php';
+
 
 class Product
 {
@@ -12,12 +14,8 @@ class Product
     public string $description;
     public string $selectedSize = 'A5';
 
-    private const SIZE_EXTRAS = [
-        'A5' => 0,
-        'A4' => 300,
-        'A3' => 600
-    ];
-    const CUSTOM_PRICE = 350;
+    private array $sizeExtras;
+    private float $customPrice;
 
     public bool $customDesign = false;
 
@@ -29,7 +27,7 @@ class Product
         string $origin,
         string $benefit,
         string $description,
-        float $basePrice,
+        float $basePrice
     ) {
         $this->id = $id;
         $this->title = $title;
@@ -39,17 +37,32 @@ class Product
         $this->benefit = $benefit;
         $this->description = $description;
         $this->basePrice = $basePrice;
+
+        $config = Config::getInstance();
+        $this->sizeExtras = $config->get('size_extras', []);
+        $this->customPrice = $config->get('custom_price', 0);
     }
 
     public function getPrice(): float
     {
-        $price = $this->basePrice + (self::SIZE_EXTRAS[$this->selectedSize] ?? 0);
+        $price = $this->basePrice + ($this->sizeExtras[$this->selectedSize] ?? 0);
 
         if ($this->customDesign) {
-            $price += self::CUSTOM_PRICE;
+            $price += $this->customPrice;
         }
 
         return $price;
+    }
+
+
+    public function __get($name)
+    {
+        return $this->$name ?? null;
+    }
+
+    public function __toString(): string
+    {
+        return "{$this->title} ({$this->category}) - {$this->getPrice()} грн";
     }
 }
 

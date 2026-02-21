@@ -1,3 +1,7 @@
+<?php
+$isClickable = $item['clickable'] ?? true;
+?>
+
 <article class="catalog__item">
   <div class="catalog__image-wrapper">
     <a href="product.html?id=<?= $item['id'] ?>" class="catalog__link">
