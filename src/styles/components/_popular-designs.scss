@@ -39,6 +39,10 @@
       }
     }
 
+    &__item.no-pointer {
+      cursor: default;
+    }
+
     &__image-wrapper {
       position: relative;
       overflow: hidden;

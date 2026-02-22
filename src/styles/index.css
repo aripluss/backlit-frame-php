@@ -590,6 +590,9 @@ body.product-page .header .burger {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.popular-designs .catalog__item.no-pointer {
+  cursor: default;
+}
 .popular-designs .catalog__image-wrapper {
   position: relative;
   overflow: hidden;
@@ -1227,15 +1230,30 @@ body.product-page .header .burger {
   }
 }
 .catalog .catalog__image-wrapper {
-  background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
   aspect-ratio: 1/1;
   border-radius: 16px;
   margin-bottom: 16px;
 }
-.catalog .catalog__image {
+.catalog .catalog__image-wrapper .catalog__image-overlay {
   position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.catalog .catalog__image-wrapper:hover .catalog__image-overlay {
+  opacity: 1;
+}
+.catalog .catalog__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.catalog .catalog__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

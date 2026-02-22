@@ -2,6 +2,7 @@
 define('BASE_URL', value: '/backlit-frame');
 require __DIR__ . '/../../data/popular-designs-items.php';
 $items = $popularDesignsItems;
+$isClickable = false;
 ?>
 
 <section id="popular-designs" class="popular-designs">
